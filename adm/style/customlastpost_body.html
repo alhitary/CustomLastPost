@@ -1,0 +1,26 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_SETTINGS}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+	<fieldset>
+		<dl>
+			<dt><label for="martin_customlastpost_type">{L_ACP_CUSTOMLASTPOST_TYPE}{L_COLON}</label><br /><span>{L_ACP_CUSTOMLASTPOST_TYPE_EXPLAIN}</span></dt>
+			<dd>
+				<select name="martin_customlastpost_type" id="martin_customlastpost_type">
+				<!-- BEGIN martin_customlastpost_options -->
+					<option value="{martin_customlastpost_options.OPTION}"<!-- IF martin_customlastpost_options.SELECTED --> selected="selected"<!-- ENDIF -->>{martin_customlastpost_options.L_TITLE}</option>
+				<!-- END martin_customlastpost_options -->
+				</select>
+			</dd>
+		</dl>
+
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

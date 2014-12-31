@@ -1,0 +1,9 @@
+services:
+    martin.customlastpost.listener:
+        class: martin\customlastpost\event\listener
+        arguments:
+            - @config
+            - @user
+            - @auth
+        tags:
+            - { name: event.listener }
